@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Pet</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap"
+      rel="stylesheet">
+    <!-- google icons -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+    <link 
+      rel="stylesheet" 
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- our css -->
+    <link href="../css/master-styles.css" rel="stylesheet" type="text/css">
+    <link href="../css/pet-search.css" rel="stylesheet" type="text/css">
+    <link
+      rel="stylesheet"
+      href="../css/add-pet.css"
+      type="text/css">
+  </head>
+  <body>
+    <!--nevigation-bar-->
+    <div id="top-navbar">
+      <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand logolink" href="./pet-search.html">FurryFriends</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="./pet-search.html"
+                >Search <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./how-it-works.html"
+                >How it Works</a
+              >
+            </li>
+          </ul>
+          <div class="dropdown notification-dropdown">
+            <div
+              class="dropdown-toggle"
+              id="dropdownMenuButton"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              role="menu"
+            >
+              <a href="#" class="notif-icon-container mt-2 mt-lg-0">
+                <span class="material-symbols-outlined notif-icon"
+                  >notifications</span
+                >
+                <span class="notif-badge"></span>
+              </a>
+            </div>
+            <div
+              class="dropdown-menu scrollable-dropdown offset-dropdown-menu"
+              aria-labelledby="dropdownMenuButton"
+            >
+              <div class="dropdown-header d-flex justify-content-between">
+                <button
+                  id="btn-1"
+                  class="btn btn-sm btn-light"
+                  onclick="showCard('notification-set1')"
+                >
+                  Chat
+                </button>
+                <button
+                  id="btn-2"
+                  class="btn btn-sm btn-light"
+                  onclick="showCard('notification-set2')"
+                >
+                  System Notification
+                </button>
+              </div>
+              <div class="dropdown-content">
+                <div id="notification-set1">
+                  <div class="card mt-2">
+                    <a href="../html/chat-demo.html" class="card-body">
+                      <h5 class="card-title">From Toronto Pet Shleter</h5>
+                      <p class="card-text">Hi, this is a demo message</p>
+                    </a>
+                  </div>
+                  <div class="card mt-2">
+                    <div class="card-body">
+                      <h5 class="card-title">From Anna</h5>
+                      <p class="card-text">Hi, this is Anna</p>
+                    </div>
+                  </div>
+                  <a href="../html/chat-demo.html" class="card mt-2">
+                    <div class="card-body">
+                      <h5 class="card-title">From Toronto Pet Shleter</h5>
+                      <p class="card-text">Hi, this is a demo message</p>
+                    </div>
+                  </a>
+                  <a href="../html/chat-demo.html" class="card mt-2">
+                    <div class="card-body">
+                      <h5 class="card-title">From Toronto Pet Shleter</h5>
+                      <p class="card-text">Hi, this is a demo message</p>
+                    </div>
+                  </a>
+                </div>
+                <div id="notification-set2" style="display: none">
+                  <a href="../html/pet-seeker-payment.html" class="card mt-2">
+                    <div class="card-body">
+                      <h5 class="card-title">Renew your credit card</h5>
+                      <p class="card-text">
+                        Your Credit card was expired, please renew ASAP
+                      </p>
+                    </div>
+                  </a>
+                  <a href="../html/pet-seeker-security.html" class="card mt-2">
+                    <div class="card-body">
+                      <h5 class="card-title">Update your Email</h5>
+                      <p class="card-text">Please update your Email Address</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="vertical-rule"></div>
+          <div class="d-flex flex-row justify-content-center align-items-center">
+            <p class="text-dark font-weight-bold my-0 mr-2">Toronto Animal Rescue</p>
+            <div class="btn-group">
+                <div class="dropdown-toggle profilePic" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="menu">
+                    <img src="../imgs/shelter-house.jpg" alt="cat pic">
+                </div>
+                <div class="dropdown-menu right-align-dropdown">
+                    <a href="./shelter-dashboard.html" class="dropdown-item" >View Profile</a>
+                    <a href="./shelter-listing.html" class="dropdown-item" >My Pets</a>
+                    <a href="homepage.html" class="dropdown-item">Logout</a>
+                </div>
+            </div>
+        </div>
+        </div>
+      </nav>
+      
+      
+      
+    </div>
+    <div class="content">
+      <!--Main Content-->
+      <div class="main-content">
+        <div class="container">
+          <input type="checkbox" id="check">
+          <div class="form">
+            <header>Add Pet</header>
+            <form action="#">
+              <input type="text" placeholder="Enter the pet's name">
+              <input type="text" placeholder="Enter the pet's sex">
+              <input type="number" id="age" placeholder="Enter pet's age" step="1" min="0" max="10">
+              <input type="number" id="weight" placeholder="Enter pet's weight" step="0.1" min="0" max="10">
+              <input type="number" id="height" placeholder="Enter pet's height" step="0.1" min="0" max="10">
+              <textarea id="feedback-behav" name="feedback" class="feedback" rows="5" placeholder="Enter the pet's behaviour" required></textarea>
+              <textarea id="feedback" name="feedback" class="feedback" rows="5" placeholder="Enter the pet's medical history" required></textarea>
+              <input type="file" id="medical" class="hidden" >
+              <label for="medical" class="file-upload">Upload Pet's Image</label>
+              <input onclick="window.location.href='./shelter-listing.html'" type='button' class="button" value='Submit'>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-- bootstrap stylings -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<!-- Navbar JS Functions -->
+<script src="../js/navbar-scripts.js"></script>
+
+  </body>
+</html>
